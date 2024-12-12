@@ -28,7 +28,8 @@ class ProfileController extends Controller
         $secure =false;
         $httpOnly =true;
 
-        return response()->json($data, 200)->withCookie($name,$value,$minutes,$path,$domain,$secure,$httpOnly);
+        return response($data, 200)->Cookie($name,$value,$minutes,$path,$domain,$secure,$httpOnly);
+
 
     }
 }
